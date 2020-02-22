@@ -1,6 +1,6 @@
 {
 	"name": "vunamhung/cptui",
-	"description": "This is a toolkit for WordPress developer.",
+	"description": "This is a setup for CPTUI plugin as package.",
 	"keywords": [
 		"wordpress",
 		"toolkit"

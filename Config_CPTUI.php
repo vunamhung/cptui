@@ -10,14 +10,13 @@ class Config_CPTUI implements Enqueueable {
 
 	const PATH = 'vendor/web-dev-studios/custom-post-type-ui/';
 
-	public function __construct($json_dir_path) {
+	public function __construct() {
 		$min = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 		$this->script_file_uri = get_theme_file_uri(self::PATH . "js/cptui{$min}.js");
 		$this->css_file_url = get_theme_file_uri(self::PATH . "css/cptui{$min}.css");
 	}
 
 	public function boot() {
-		// Make it work inside theme.
 		add_action('after_setup_theme', 'cptui_create_submenus');
 		add_action('after_setup_theme', [$this, 'remove_ads']);
 		add_action('admin_enqueue_scripts', [$this, 'enqueue'], -1);
