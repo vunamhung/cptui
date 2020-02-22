@@ -1,0 +1,49 @@
+{
+	"name": "vunamhung/cptui",
+	"description": "This is a toolkit for WordPress developer.",
+	"keywords": [
+		"wordpress",
+		"toolkit"
+	],
+	"homepage": "https://github.com/vunamhung/cptui",
+	"license": "GPL-3.0+",
+	"support": {
+		"issues": "https://github.com/vunamhung/cptui/issues",
+		"source": "https://github.com/vunamhung/cptui"
+	},
+	"authors": [
+		{
+			"name": "Vu Nam Hung",
+			"email": "vunamhung@gmail.com",
+			"homepage": "https://github.com/vunamhung/",
+			"role": "Lead Developer"
+		}
+	],
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "web-dev-studios/custom-post-type-ui",
+				"version": "1.6.2",
+				"type": "library",
+				"dist": {
+					"type": "zip",
+					"url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.latest-stable.zip"
+				},
+				"autoload": {
+					"files": ["custom-post-type-ui.php"]
+				}
+			}
+		}
+	],
+	"require": {
+		"php": ">=5.6.0",
+		"vunamhung/wptoolkit": "^0.9.8",
+		"web-dev-studios/custom-post-type-ui": "^1.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"vnh\\": "."
+		}
+	}
+}
