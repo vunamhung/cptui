@@ -13,6 +13,19 @@ class Save_CPTUI_to_JSON {
 		$this->tax_json_file_path = get_theme_file_path($json_dir_path . 'ctax.json');
 	}
 
+	public function import_cpt_tax() {
+		$cpt_options = json_decode(fs()->get_contents($this->cpt_json_file_path), true);
+		$ctax_options = json_decode(fs()->get_contents($this->tax_json_file_path), true);
+
+		if (is_array($cpt_options)) {
+			update_option('cptui_post_types', $cpt_options);
+		}
+
+		if (is_array($ctax_options)) {
+			update_option('cptui_taxonomies', $ctax_options);
+		}
+	}
+
 	public function boot() {
 		add_action('cptui_after_update_post_type', [$this, 'save_post_types_to_local_json_file']);
 		add_action('cptui_after_update_taxonomy', [$this, 'save_taxonomies_to_local_json_file']);
