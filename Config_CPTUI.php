@@ -8,7 +8,7 @@ class Config_CPTUI implements Enqueueable {
 	public $script_file_uri;
 	public $css_file_url;
 
-	const PATH = 'vendor/web-dev-studios/custom-post-type-ui/';
+	const PATH = 'vendor/vunamhung/custom-post-type-ui/';
 
 	public function __construct() {
 		$min = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';

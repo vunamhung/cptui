@@ -4,33 +4,78 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acade7df0cafa6b1d82c8ed6569246cf",
+    "content-hash": "2302f7bd23dcd590f30cbcbd79bb6cf8",
     "packages": [
         {
-            "name": "vunamhung/wptoolkit",
-            "version": "0.9.8",
+            "name": "vunamhung/custom-post-type-ui",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/vunamhung/wptoolkit.git",
-                "reference": "9a70c8a56d3c39255bd946c9ee906433b4d3100a"
+                "url": "https://github.com/vunamhung/custom-post-type-ui.git",
+                "reference": "9167ee39c33ca891db9ac34d07838e8d4963a710"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vunamhung/wptoolkit/zipball/9a70c8a56d3c39255bd946c9ee906433b4d3100a",
-                "reference": "9a70c8a56d3c39255bd946c9ee906433b4d3100a",
+                "url": "https://api.github.com/repos/vunamhung/custom-post-type-ui/zipball/9167ee39c33ca891db9ac34d07838e8d4963a710",
+                "reference": "9167ee39c33ca891db9ac34d07838e8d4963a710",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "custom-post-type-ui.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WebDevStudios",
+                    "email": "contact@webdevstudios.com",
+                    "homepage": "https://github.com/WebDevStudios/custom-post-type-ui"
+                }
+            ],
+            "description": "Custom Post Type UI Plugin for Wordpress found at https://wordpress.org/plugins/custom-post-type-ui/ ",
+            "homepage": "https://github.com/WebDevStudios/custom-post-type-ui",
+            "keywords": [
+                "cms",
+                "cpt",
+                "custom post types",
+                "custom-post-type",
+                "post type",
+                "tax",
+                "taxonomies",
+                "taxonomy"
+            ],
+            "time": "2020-03-06T02:32:35+00:00"
+        },
+        {
+            "name": "vunamhung/wptoolkit",
+            "version": "0.9.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vunamhung/wptoolkit.git",
+                "reference": "70ef24650134dd81f74ead9e4aeffdc1b1730224"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vunamhung/wptoolkit/zipball/70ef24650134dd81f74ead9e4aeffdc1b1730224",
+                "reference": "70ef24650134dd81f74ead9e4aeffdc1b1730224",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.0"
             },
-            "suggest": {
-                "composer/installers": "~1.0"
-            },
             "type": "library",
             "autoload": {
                 "files": [
                     "bootstrap.php",
+                    "helpers/theme.php",
                     "helpers/global.php",
+                    "helpers/core.php",
+                    "helpers/conditional.php",
                     "helpers/general.php",
                     "helpers/array.php",
                     "helpers/woo.php",
@@ -58,28 +103,16 @@
                 "toolkit",
                 "wordpress"
             ],
-            "time": "2020-02-21T09:18:47+00:00"
-        },
-        {
-            "name": "web-dev-studios/custom-post-type-ui",
-            "version": "1.6.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.latest-stable.zip"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "custom-post-type-ui.php"
-                ]
-            }
+            "time": "2020-03-03T04:34:05+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "vunamhung/custom-post-type-ui": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.6.0"
